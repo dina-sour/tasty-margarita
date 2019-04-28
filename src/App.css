@@ -1,0 +1,105 @@
+.App {
+  max-width: 100%;
+}
+
+
+.pokeGrid{
+  font-family: Poppins, sans-serif;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  margin-left: 160px;
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+.pokeCell{
+  background-color: white;
+  border-radius: 12px;
+  border: 3px solid rgb(202, 130, 172);
+  height: 230px;
+  width: 400px;
+  font-size: 20px;
+  text-transform: uppercase;
+  display:table;
+  transition: all linear 0.5s;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -ms-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.06); /* IE 9 */
+  -webkit-transform: scale(1.06); /* Safari 3-8 */
+  transform: scale(1.06); 
+  box-shadow: 0 4px 8px 0 rgba(46, 44, 44, 0.2), 0 6px 20px 0 rgba(49, 48, 48, 0.19);
+}
+
+.poke-name{
+  text-align: center;
+  letter-spacing: 3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(202, 130, 172);
+  width: 100%;
+  font-weight: bold;
+}
+
+.poke-photo{
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.poke-cell-content{
+  display: flex;
+}
+
+.poke-info{
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10%;
+  margin-left: 19%;
+}
+
+.poke-info > div{
+  padding-bottom: 7px;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #ca7b80;
+  padding: 16px 13px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  font-family: Ubuntu, sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  
+}
+
+.footer > p{
+  margin-left: 2%;
+  text-decoration: none;
+}
+
+.footer{
+  background-color: rgb(219, 212, 212);
+  height: 40px;
+  padding-top: 0.2%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+
+
+
