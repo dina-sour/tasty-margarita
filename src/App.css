@@ -63,7 +63,7 @@
 }
 
 .poke-photo{
-  margin: 5%;
+  margin: 2%;
 }
 
 .poke-cell-content{
@@ -76,7 +76,7 @@
   font-weight: bold;
   letter-spacing: 0.1em;
   margin-top: 10%;
-  margin-left: 14%;
+  margin-left: 3em;
   margin-right: 6%;
   margin-bottom: 10%;
   color: rgb(75, 83, 82);
@@ -96,12 +96,14 @@
   font-family: Arvo, sans-serif;
   letter-spacing: 0.1em;
   font-weight: bold;
+  width: 100%;
   
 }
 
 .footer > p{
   margin-left: 2%;
   text-decoration: none;
+  width: 100%;
 }
 
 .footer{
