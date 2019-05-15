@@ -11,8 +11,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       pokemon: [],
-      searchTerm: ''
+      searchValue: ''
     } 
+    
     this.onChange = this.onChange.bind(this) 
   }
 
@@ -27,17 +28,11 @@ class App extends React.Component {
 
   onChange(e){
     this.setState({
-      searchTerm: e.target.value 
+      searchValue: e.target.value 
     })
   }
 
   render() {
-    
-    const pokemon = this.state.pokemon.map((item)=>{
-      if(!this.state.searchTerm) return <div>{item}</div> //return the items without filter when searchterm is empty
-      const regEx = new RegExp(this.state.searchTerm, 'g') //create regex based on search term to filter the items 
-      return regEx.test(item) && <div>{item}</div> //if the item passes the regex text, return that item
-    })
 
     return (
       <div className="app">
@@ -48,7 +43,8 @@ class App extends React.Component {
         <input className = "search-bar" type="text" onChange={this.onChange} placeholder='Search for Pokémon...'></input>
 
             <div className = "poke-grid">
-              { this.state.pokemon.map(pokemon => 
+              { this.state.pokemon.filter(poke=>poke.name.toString().toLowerCase().includes(this.state.searchValue.toLowerCase()))
+              .map(pokemon => 
               <div className = "poke-cell zoom" onClick = {this.nonesense}>
 
                     <div className = "poke-name">{pokemon.name}</div>
