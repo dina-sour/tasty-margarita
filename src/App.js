@@ -13,7 +13,7 @@ class App extends React.Component {
       pokemon: [],
       searchValue: ''
     } 
-    
+
     this.onChange = this.onChange.bind(this) 
   }
 
@@ -43,7 +43,7 @@ class App extends React.Component {
         <input className = "search-bar" type="text" onChange={this.onChange} placeholder='Search for Pokémon...'></input>
 
             <div className = "poke-grid">
-              { this.state.pokemon.filter(poke=>poke.name.toString().toLowerCase().includes(this.state.searchValue.toLowerCase()))
+              { this.state.pokemon.filter(poke=>poke.name.toString().toLowerCase().includes(this.state.searchValue.toLowerCase().trim()))
               .map(pokemon => 
               <div className = "poke-cell zoom" onClick = {this.nonesense}>
 
