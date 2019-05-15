@@ -1,5 +1,6 @@
 .app {
   max-width: 100%;
+  max-height: 100%;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -10,25 +11,51 @@
   flex-direction: column;
 }
 
-
-.pokeGrid{
-  font-family: Rubik, sans-serif;
-  display: grid;
-  grid-column-gap: 6%;
-  grid-row-gap: 5em;
-  grid-template-columns: auto auto;
-  padding: 1%;
-  margin-left: 8.25%;
-  margin-top: 5%;
-  padding-bottom: 7%;
+.footer {
+  background-color: #efefef;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  bottom:0;
 }
-.pokeCell{
-  background-color: white;
-  border-radius: 3em;
-  border: 0.5em solid  #20B2AA;
-  height: 35%;
-  width: 75%;
-  font-size: 5%;
+
+.footer a{
+  text-decoration: none;
+}
+
+
+.header{
+  background-color: #419EAE;
+  color: white;
+  font-size: 210%;
+  font-weight: bold;
+  font-family: Abel, sans-serif;
+  letter-spacing: 0.1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1%;
+}
+
+.poke-grid {
+  font-family: Oswald, sans-serif;
+  display: grid;
+  grid-column-gap: 0.1%;
+  grid-row-gap: 2.7em;
+  grid-template-columns: auto auto auto;
+  padding: 4%;
+  margin-bottom: 2%;
+  margin-top: 7%;
+  margin-left: 6%;
+}
+
+.poke-cell {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.8em;
+  border: 3px solid rgb(138, 189, 180);
+  height: 50%;
+  width: 80%;
+  text-align: center;
   text-transform: uppercase;
   display:table;
   transition: all linear 0.5s;
@@ -36,6 +63,43 @@
   -moz-transition: opacity 3s ease-in-out;
   -ms-transition: opacity 3s ease-in-out;
   -o-transition: opacity 3s ease-in-out;
+
+}
+
+.poke-name{
+  letter-spacing: 0.2em;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 100%;
+  color: white;
+  background-color: rgb(138, 189, 180);
+  width: 100.2%;
+  border-radius: 0.2em;
+}
+
+
+.poke-photo{
+  padding-top: 1%;
+  align-self: center;
+
+}
+
+.poke-number{
+  font-size: 0.6em;
+  padding-bottom: 2%;
+  font-family: Oswald, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: rgb(65, 61, 61);
+}
+
+.poke-type{
+  color: rgb(65, 61, 61);
+  font-size: 0.9em;
+  padding-bottom: 3%;
+  font-family: Oswald, sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 .zoom {
@@ -49,69 +113,26 @@
   box-shadow: 0 4px 8px 0 rgba(46, 44, 44, 0.2), 0 6px 20px 0 rgba(49, 48, 48, 0.19);
 }
 
-.poke-name{
-  text-align: center;
-  letter-spacing: 0.2em;
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
-  font-size: 25em;
-  color: white;
-  background-color: #20B2AA;
-  width: 100%;
-  font-family: Karla, sans-serif;
-  border-radius: 0.5em;
+#search{
+  margin-top: 90px;
+  margin-left: 30%;
 }
 
-.poke-photo{
-  margin: 2%;
+#search input{
+  width: 60%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://66.media.tumblr.com/97e194ba74257cad03d826bbae846491/tumblr_inline_p9rst2e1Wr1so0coz_75sq.png');
+  background-position: 8px 12px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
 }
 
-.poke-cell-content{
-  display: flex;
+.search-bar{
+  margin-top: 7%;
 }
-
-.poke-info{
-  font-size: 18em;
-  font-family: Rubik, sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  margin-top: 10%;
-  margin-left: 3em;
-  margin-right: 6%;
-  margin-bottom: 10%;
-  color: rgb(75, 83, 82);
-}
-
-.poke-info div{
-  padding-bottom: 0.5em;
-}
-
-.header {
-  overflow: hidden;
-  background-color: #C14646;
-  padding: 1.5% 2%;
-  font-size: 3em;
-  font-weight: bolder;
-  color: white;
-  font-family: Arvo, sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  width: 100%;
-  
-}
-
-.footer > p{
-  margin-left: 2%;
-  text-decoration: none;
-  width: 100%;
-}
-
-.footer{
-  background-color: rgb(219, 212, 212);
-  height: 2%;
-  padding-top: 0.1%;
-  text-align: center;
-}
-
 
 
