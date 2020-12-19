@@ -65,8 +65,7 @@ class App extends React.Component {
 }
 
 const AppContainer = styled.div`
-  max-width: 98%;
-  max-height: 100%;
+  box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -75,6 +74,8 @@ const AppContainer = styled.div`
   user-select: none;
   display: flex;
   flex-direction: column;
+  overflow-x:hidden;
+  position: relative
 `;
 
 const SearchContainer = styled.div`

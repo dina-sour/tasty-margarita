@@ -20,7 +20,6 @@ const typeColorPairs = {
 }
 export const generateColorForType = (type) => {
     let color = typeColorPairs[type.toLowerCase()];
-    console.log(type + color);
     if (!color) {
         color = typeColorPairs["default"];
     }

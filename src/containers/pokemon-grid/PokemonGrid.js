@@ -33,6 +33,7 @@ const PokemonGridContainer = styled.div`
     flex-wrap: wrap;
     align-self: center;
     justify-content: center;
+    width: 95%;
 `;
 
 export default PokemonGrid;
