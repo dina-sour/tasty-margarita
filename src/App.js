@@ -91,6 +91,7 @@ const SearchContainer = styled.div`
 const Credits = styled.div`
   margin-left: 0.5em;
   bottom: 0;
+  text-align: center;
 `;
 
 export default App;
