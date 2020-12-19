@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const PokemonCard = (props) => {
     return (
-        <PokemonCardContainer>
+        <PokemonCardContainer color={props.color}>
             <PokemonName color={props.color}>{props.name}</PokemonName>
                 <PokemonPhoto>
                     <img src={props.img} ></img>
@@ -16,7 +16,7 @@ const PokemonCard = (props) => {
 
 const PokemonCardContainer = styled.div`
     border-radius: 0.8em;
-    border: 3px solid rgb(138, 189, 180);
+    border: ${props => "3px solid "+props.color || ""};
     height: 13em;
     display: flex;
     width: 12em;

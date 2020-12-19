@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PokemonCard from '../../components/pokemon-card/PokemonCard';
+import { generateColorForType } from '../../utils/PokemonTypeColorGeneartor';
 
 const PokemonGrid = (props) => {
     return (
@@ -13,6 +14,7 @@ const PokemonGrid = (props) => {
                         num={pokemon.num}
                         types={pokemon.type.join()}
                         key={pokemon.name}
+                        color={generateColorForType(pokemon.type[0])}
                     />
                 )
             }
@@ -30,7 +32,7 @@ const PokemonGridContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     align-self: center;
-    justify-content: space-evenly;
+    justify-content: center;
 `;
 
 export default PokemonGrid;
