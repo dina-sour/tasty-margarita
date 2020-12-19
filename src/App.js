@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 import PokemonGrid from './containers/pokemon-grid/PokemonGrid';
 import TextField from '@material-ui/core/TextField';
 
@@ -14,9 +13,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       pokemon: [],
-      filteredPokemon:[],
+      filteredPokemon: [],
       searchValue: ''
-    }
+        }
     this.onInputChange = this.onInputChange.bind(this);
   }
 
@@ -24,7 +23,7 @@ class App extends React.Component {
     axios.get(URL)
       .then(res => {
         const pokemon = res.data.pokemon;
-        this.setState({ 
+        this.setState({
           pokemon: pokemon,
           filteredPokemon: pokemon
         });
@@ -58,7 +57,9 @@ class App extends React.Component {
         <PokemonGrid
           pokemon={this.state.filteredPokemon}
         />
-        <Footer />
+        <Credits>
+          <p>Made with love by <a href="https://github.com/dina-sour">Dina Matveev</a></p>
+        </Credits>
       </AppContainer>
     );
   }
@@ -75,7 +76,6 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x:hidden;
-  position: relative
 `;
 
 const SearchContainer = styled.div`
@@ -86,6 +86,11 @@ const SearchContainer = styled.div`
   justify-content: flex-start;
   align-items:center;
   width: 40%;
+`;
+
+const Credits = styled.div`
+  margin-left: 0.5em;
+  bottom: 0;
 `;
 
 export default App;

@@ -34,6 +34,7 @@ const PokemonGridContainer = styled.div`
     align-self: center;
     justify-content: center;
     width: 95%;
+    margin-bottom: 3%;
 `;
 
 export default PokemonGrid;
